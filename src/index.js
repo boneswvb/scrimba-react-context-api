@@ -2,16 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import ThemeContext from './themeContext';
+import {ThemeContextProvider} from './themeContext';
 import'tachyons'
 import * as serviceWorker from './serviceWorker';
 
 // ThemeContext.Provider & ThemeContext.Consumer
 
 ReactDOM.render(
-	<ThemeContext.Provider value="dark">
+	<ThemeContextProvider>
 		<App />
-	</ThemeContext.Provider>
+	</ThemeContextProvider>
 	, document.getElementById("root")
 )
 
